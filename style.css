@@ -1,5 +1,5 @@
 /* ============================================
-   CALCULATRICE - Styles
+   CALCULATRICE - Widget pour Notion
    ============================================ */
 
 /* --- Variables --- */
@@ -16,41 +16,26 @@
 /* --- Reset --- */
 * {
     box-sizing: border-box;
-}
-
-html,
-body {
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
-/* --- Layout --- */
-body {
-    font-family: 'Inter', sans-serif;
-    background: transparent;
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-}
-
-/* --- Conteneur principal --- */
+/* --- Conteneur principal (widget) --- */
 .calc {
     width: 100%;
     max-width: 320px;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    border-radius: 28px;
+    border-radius: 20px;
     backdrop-filter: blur(20px) saturate(160%);
     -webkit-backdrop-filter: blur(20px) saturate(160%);
     box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 8px 32px rgba(0, 0, 0, 0.25),
         inset 0 1px 0 var(--glass-highlight);
-    padding: 22px;
+    padding: 16px;
     position: relative;
     overflow: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
 .calc::before {
@@ -67,19 +52,19 @@ body {
 /* --- Affichage --- */
 .display {
     position: relative;
-    padding: 18px 14px 10px;
+    padding: 14px 12px 8px;
     text-align: right;
-    min-height: 96px;
+    min-height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 6px;
+    gap: 4px;
 }
 
 .display .expression {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-dim);
-    min-height: 18px;
+    min-height: 16px;
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: 0.02em;
     word-break: break-all;
@@ -87,7 +72,7 @@ body {
 
 .display .result {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 600;
     color: var(--text);
     line-height: 1.1;
@@ -99,8 +84,8 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-top: 14px;
+    gap: 8px;
+    margin-top: 10px;
 }
 
 /* --- Boutons (base) --- */
@@ -108,13 +93,13 @@ button {
     border: none;
     outline: none;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--text);
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.10);
-    border-radius: 16px;
-    padding: 16px 0;
+    border-radius: 12px;
+    padding: 14px 0;
     cursor: pointer;
     transition: transform 0.08s ease, background 0.15s ease, box-shadow 0.15s ease;
     -webkit-tap-highlight-color: transparent;
