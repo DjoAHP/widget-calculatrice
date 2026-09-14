@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculatrice web élégante avec design glassmorphism">
+    <title>Calculatrice</title>
+
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calc" role="group" aria-label="Calculatrice">
+        <div class="display">
+            <div class="expression" id="expression">&nbsp;</div>
+            <div class="result" id="result">0</div>
+        </div>
+
+        <div class="keys">
+            <!-- Ligne 1 : Fonctions -->
+            <button class="fn" data-action="clear">AC</button>
+            <button class="fn" data-action="negate">±</button>
+            <button class="fn" data-action="percent">%</button>
+            <button class="op" data-op="÷">÷</button>
+
+            <!-- Ligne 2 -->
+            <button data-num="7">7</button>
+            <button data-num="8">8</button>
+            <button data-num="9">9</button>
+            <button class="op" data-op="×">×</button>
+
+            <!-- Ligne 3 -->
+            <button data-num="4">4</button>
+            <button data-num="5">5</button>
+            <button data-num="6">6</button>
+            <button class="op" data-op="−">−</button>
+
+            <!-- Ligne 4 -->
+            <button data-num="1">1</button>
+            <button data-num="2">2</button>
+            <button data-num="3">3</button>
+            <button class="op" data-op="+">+</button>
+
+            <!-- Ligne 5 -->
+            <button class="zero" data-num="0">0</button>
+            <button data-action="decimal">,</button>
+            <button class="equals" data-action="equals">=</button>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
